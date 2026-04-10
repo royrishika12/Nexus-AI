@@ -1,0 +1,26 @@
+$bg-color: #030510;
+$surface-color: #0c1126;
+$surface-highlight: #171d36;
+$primary-color: #8b5cf6;
+$primary-hover: #a78bfa;
+$accent-color: #3b82f6;
+$text-primary: #ffffff;
+$text-secondary: #94a3b8;
+$border-color: rgba(255, 255, 255, 0.08);
+$danger-color: #f43f5e;
+$success-color: #10b981;
+
+$glass-bg: rgba(12, 17, 38, 0.65);
+$glass-border: rgba(139, 92, 246, 0.15);
+
+$gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+$gradient-accent: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+$gradient-surface: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+
+$radius-sm: 0.5rem;
+$radius-md: 0.75rem;
+$radius-lg: 1.25rem;
+$radius-xl: 2rem;
+
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+$transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);

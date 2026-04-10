@@ -1,0 +1,225 @@
+@use "../styles/variables" as *;
+@use "../styles/mixins" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.uploadZone {
+  flex: 1;
+  @include glassmorphism;
+  border: 2px dashed $border-color;
+  @include flex-center;
+  flex-direction: column;
+  transition: $transition-smooth;
+
+  &:hover {
+    border-color: $primary-color;
+    background-color: rgba($primary-color, 0.05);
+  }
+}
+
+.uploadContent {
+  text-align: center;
+  
+  .uploadIcon {
+    font-size: 4rem;
+    color: $primary-color;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: 2rem;
+  }
+}
+
+.browseBtn {
+  background-color: $primary-color;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: $radius-md;
+  cursor: pointer;
+  font-weight: 600;
+  transition: $transition-smooth;
+  display: inline-block;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.analyzingZone {
+  flex: 1;
+  @include flex-center;
+  flex-direction: column;
+
+  h3 {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-top: 0.5rem;
+  }
+}
+
+.scannerContainer {
+  position: relative;
+  width: 120px;
+  height: 150px;
+  @include flex-center;
+  background-color: $surface-highlight;
+  border-radius: $radius-md;
+  overflow: hidden;
+
+  .fileIcon {
+    font-size: 4rem;
+    color: $primary-color;
+  }
+
+  .scannerLine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    box-shadow: 0 0 10px $accent-color;
+    animation: scan 2s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: calc(100% - 4px); }
+}
+
+.resultsZone {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.scoreHeader {
+  @include glassmorphism;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.scoreCircle {
+  width: 120px;
+  height: 120px;
+}
+
+.circularChart {
+  display: block;
+  margin: 0 auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circleBg {
+  fill: none;
+  stroke: $surface-highlight;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke: $accent-color;
+  animation: progress 1s ease-out forwards;
+}
+
+.percentage {
+  fill: #fff;
+  font-family: inherit;
+  font-size: 0.5em;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+@keyframes progress {
+  0% { stroke-dasharray: 0 100; }
+}
+
+.scoreText {
+  h2 {
+    font-size: 2rem;
+    color: $accent-color;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.resetBtn {
+  background-color: transparent;
+  border: 1px solid $border-color;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: $radius-sm;
+  transition: $transition-smooth;
+
+  &:hover {
+    border-color: $primary-color;
+    background-color: rgba($primary-color, 0.1);
+  }
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.detailCard {
+  @include glassmorphism;
+  padding: 1.5rem;
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+
+    .successIcon { color: $accent-color; }
+    .warningIcon { color: #f59e0b; }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+      color: $text-primary;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: $text-secondary;
+      }
+    }
+  }
+}

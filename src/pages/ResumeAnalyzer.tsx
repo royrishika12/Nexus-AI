@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { MdCloudUpload, MdInsertDriveFile, MdCheckCircle, MdErrorOutline } from 'react-icons/md';
 import styles from './ResumeAnalyzer.module.scss';
-import clsx from 'clsx';
 
 const ResumeAnalyzer: React.FC = () => {
-  const [file, setFile] = useState<File | null>(null);
+  const [, setFile] = useState<File | null>(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [results, setResults] = useState<boolean>(false);
 

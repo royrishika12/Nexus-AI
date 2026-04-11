@@ -144,7 +144,7 @@
 }
 
 .percentage {
-  fill: #fff;
+  fill: var(--text-color);
   font-family: inherit;
   font-size: 0.5em;
   text-anchor: middle;
@@ -171,7 +171,7 @@
 .resetBtn {
   background-color: transparent;
   border: 1px solid $border-color;
-  color: white;
+  color: var(--text-color);
   padding: 0.5rem 1.5rem;
   border-radius: $radius-sm;
   transition: $transition-smooth;

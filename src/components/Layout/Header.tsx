@@ -2,7 +2,6 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { MdNotifications, MdSearch } from 'react-icons/md';
 import styles from './Header.module.scss';
-import clsx from 'clsx';
 
 const Header: React.FC = () => {
   const location = useLocation();

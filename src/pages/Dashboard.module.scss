@@ -111,7 +111,7 @@
   position: relative;
   overflow: hidden;
   transition: $transition-bounce;
-  background: rgba(12, 17, 38, 0.8);
+  background: $surface-color;
   
   &:hover {
     transform: translateY(-5px);
@@ -223,7 +223,7 @@
 .recentActivity, .marketTrends {
   @include glassmorphism;
   padding: 2rem;
-  background: rgba(12, 17, 38, 0.5);
+  background: $surface-color;
 
   h3 {
     margin-bottom: 1.5rem;

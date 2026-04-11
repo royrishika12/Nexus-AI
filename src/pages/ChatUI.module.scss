@@ -64,7 +64,7 @@
     color: $text-secondary;
     font-size: 1.5rem;
     padding: 0.5rem;
-    &:hover { color: white; }
+    &:hover { color: var(--primary-color); }
   }
 }
 
@@ -143,11 +143,11 @@
 }
 
 .aiMessage {
-  background: rgba(12, 17, 38, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: $surface-highlight;
+  border: 1px solid $border-color;
   color: $text-primary;
   border-bottom-left-radius: 4px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .userMessage {
@@ -193,7 +193,7 @@
     color: $text-secondary;
     font-size: 1.4rem;
     padding: 0.5rem;
-    &:hover { color: white; }
+    &:hover { color: var(--primary-color); }
   }
 
   input {

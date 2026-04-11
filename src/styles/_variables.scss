@@ -1,21 +1,22 @@
-$bg-color: #030510;
-$surface-color: #0c1126;
-$surface-highlight: #171d36;
+$bg-color: #f8fafc;
+$surface-color: #ffffff;
+$surface-highlight: #f1f5f9;
 $primary-color: #8b5cf6;
-$primary-hover: #a78bfa;
+$primary-hover: #7c3aed;
+$secondary-color: #1e3a8a;
 $accent-color: #3b82f6;
-$text-primary: #ffffff;
-$text-secondary: #94a3b8;
-$border-color: rgba(255, 255, 255, 0.08);
-$danger-color: #f43f5e;
+$text-primary: #0f172a;
+$text-secondary: #475569;
+$border-color: #e2e8f0;
+$danger-color: #ef4444;
 $success-color: #10b981;
 
-$glass-bg: rgba(12, 17, 38, 0.65);
-$glass-border: rgba(139, 92, 246, 0.15);
+$glass-bg: rgba(255, 255, 255, 0.85);
+$glass-border: rgba(139, 92, 246, 0.2);
 
-$gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
-$gradient-accent: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-$gradient-surface: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+$gradient-primary: linear-gradient(135deg, #8b5cf6 0%, #1e3a8a 100%);
+$gradient-accent: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+$gradient-surface: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(30, 58, 138, 0.05) 100%);
 
 $radius-sm: 0.5rem;
 $radius-md: 0.75rem;

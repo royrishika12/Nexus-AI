@@ -5,7 +5,7 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: dark;
+  color-scheme: light;
   color: $text-primary;
   background-color: $bg-color;
 
@@ -13,6 +13,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg-color: #{$bg-color};
+  --card-bg: #{$surface-color};
+  --primary-color: #{$primary-color};
+  --primary-color-rgb: 139, 92, 246; // For rgba usage
+  --secondary-color: #{$secondary-color};
+  --text-color: #{$text-primary};
+  --text-muted: #{$text-secondary};
+  --border-color: #{$border-color};
 }
 
 body {
@@ -21,6 +30,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 * {
@@ -30,12 +41,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-color);
 }
 
 a {
   font-weight: 500;
-  color: $primary-color;
+  color: var(--primary-color);
   text-decoration: none;
   &:hover {
     color: $primary-hover;
@@ -53,7 +64,7 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: $bg-color;
+  background: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -62,5 +73,5 @@ button {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $primary-color;
+  background: var(--primary-color);
 }
